@@ -3,11 +3,16 @@ export function showHome() {
     content.textContent = "";
 
     const homeContainer = document.createElement("div");
+    homeContainer.classList.add("home-container")
 
     const header = document.createElement("h1");
+    header.classList.add("header")
     const subheader = document.createElement("h2");
+    subheader.classList.add("subheader")
     const para1 = document.createElement("p");
     const para2 = document.createElement("p");
+    para1.classList.add("para")
+    para2.classList.add("para")
 
     header.textContent = "The Den";
     subheader.textContent = "Good coffee. Fresh pastries. Slow mornings.";
