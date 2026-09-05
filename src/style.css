@@ -141,3 +141,50 @@ button:focus {
     margin-bottom: 2rem;
     color: var(--green);
 }
+
+.about-container {
+    color: var(--green);
+    max-width: 800px;
+    margin: 4rem auto;
+}
+
+.about-container h1::after {
+    content: "";
+    display: block;
+    background-color: var(--brown);
+    width: 160px;
+    height: 4px;
+    margin-top: 0.75rem;
+}
+
+.about-container h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.about-container p {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    max-width: 400px;
+}
+
+.opening {
+    background-color: var(--cards);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-top: 2.5rem;
+    max-width: 400px;
+}
+
+.opening h2 {
+    color: var(--brown);
+    font-size: 1.8rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--brown);
+}
+
+.opening p {
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+}
