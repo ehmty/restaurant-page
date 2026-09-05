@@ -1,5 +1,6 @@
 export function showHome() {
     const content = document.querySelector("#content");
+    content.textContent = "";
 
     const header = document.createElement("h1");
     const subheader = document.createElement("h2");
