@@ -1,3 +1,76 @@
+:root {
+    --creme: #F4EBDD;
+    --green: #24382F;
+    --brown: #A65A32;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
-    background-color: grey;
+    background-color: var(--creme);
+}
+
+header {
+    background-color: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 5rem;
+    height: 4rem;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+}
+
+button {
+    background-color: var(--green);
+    color: var(--creme);
+    border: none;
+}
+
+button:focus {
+    border-bottom: 2px solid var(--brown);
+    border-radius: 1px;
+}
+
+#content {
+    padding: 4rem 2rem;
+}
+
+#content .header {
+    margin-bottom: 1rem;
+}
+
+#content .subheader {
+    margin-bottom: 2rem;
+}
+
+#content .para {
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.home-container {
+    color: var(--green);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.home-container h1::after {
+    content: "";
+    display: block;
+    background-color: var(--brown);
+    width: 180px;
+    height: 4px;
+    margin-top: 0.75rem;
+}
+
+.header {
+    font-size: 5rem;
 }
