@@ -1,3 +1,6 @@
+import coffeeImage from "./coffee.svg";
+import croissantImage from "./croissant.svg";
+
 export function showMenu() {
     const content = document.querySelector("#content");
     content.textContent = "";
@@ -11,6 +14,18 @@ export function showMenu() {
     const foodSection = document.createElement("div");
     foodSection.classList.add("menu-section");
     
+    const coffeeHeader = document.createElement("div");
+    coffeeHeader.classList.add("menu-section-header");
+    
+    const foodHeader = document.createElement("div");
+    foodHeader.classList.add("menu-section-header");
+
+    const coffeeImg = document.createElement("img");
+    coffeeImg.src = coffeeImage;
+
+    const croissantImg = document.createElement("img");
+    croissantImg.src = croissantImage;
+
     const menu = document.createElement("h1");
     const coffee = document.createElement("h2");
     const food = document.createElement("h2");
@@ -43,8 +58,10 @@ export function showMenu() {
     food2Text.textContent = "Soft dough, cinnamon and a light glaze.";
     food3Text.textContent = "Sourdough toast with avocado, herbs and a touch of lemon.";
 
-    coffeeSection.append(coffee, coffee1, coffee1Text, coffee2, coffee2Text, coffee3, coffee3Text);
-    foodSection.append(food, food1, food1Text, food2, food2Text, food3, food3Text);
+    coffeeHeader.append(coffeeImg, coffee);
+    foodHeader.append(croissantImg, food);
+    coffeeSection.append(coffeeHeader, coffee1, coffee1Text, coffee2, coffee2Text, coffee3, coffee3Text);
+    foodSection.append(foodHeader, food1, food1Text, food2, food2Text, food3, food3Text);
     menuContainer.append(menu, coffeeSection, foodSection);
     content.append(menuContainer);
 }
