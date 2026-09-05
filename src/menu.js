@@ -2,6 +2,8 @@ export function showMenu() {
     const content = document.querySelector("#content");
     content.textContent = "";
 
+    const menuContainer = document.createElement("div");
+
     const menu = document.createElement("h1");
     const coffee = document.createElement("h2");
     const food = document.createElement("h2");
@@ -34,6 +36,6 @@ export function showMenu() {
     food2Text.textContent = "Soft dough, cinnamon and a light glaze.";
     food3Text.textContent = "Sourdough toast with avocado, herbs and a touch of lemon.";
 
-    content.append(menu, coffee, coffee1, coffee1Text, coffee2, coffee2Text, coffee3, coffee3Text, food, food1, food1Text, food2, food2Text, food3, food3Text);
-
+    menuContainer.append(menu, coffee, coffee1, coffee1Text, coffee2, coffee2Text, coffee3, coffee3Text, food, food1, food1Text, food2, food2Text, food3, food3Text);
+    content.append(menuContainer);
 }

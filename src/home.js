@@ -2,6 +2,8 @@ export function showHome() {
     const content = document.querySelector("#content");
     content.textContent = "";
 
+    const homeContainer = document.createElement("div");
+
     const header = document.createElement("h1");
     const subheader = document.createElement("h2");
     const para1 = document.createElement("p");
@@ -15,6 +17,6 @@ export function showHome() {
     para2.textContent = `Whether you're here for a quick espresso, a buttery croissant or a quiet
                         afternoon break, The Den is a place to slow down and stay a little longer.`
 
-    content.append(header, subheader, para1, para2);
-
+    homeContainer.append(header, subheader, para1, para2);
+    content.append(homeContainer);
 }
