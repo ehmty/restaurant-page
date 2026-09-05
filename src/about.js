@@ -3,6 +3,10 @@ export function showAbout() {
     content.textContent = "";
     
     const aboutContainer = document.createElement("div");
+    aboutContainer.classList.add("about-container");
+
+    const openingCard = document.createElement("div");
+    openingCard.classList.add("opening")
 
     const title = document.createElement("h1");
     const intro = document.createElement("p");
@@ -18,6 +22,8 @@ export function showAbout() {
     weekdays.textContent = "Monday - Friday: 07:30 - 18:00";
     weekend.textContent = "Saturday - Sunday: 09:00 - 17:00";
 
-    aboutContainer.append(title, intro, text, opening, weekdays, weekend);
+
+    openingCard.append(opening, weekdays, weekend)
+    aboutContainer.append(title, intro, text, openingCard);
     content.append(aboutContainer);
 }
