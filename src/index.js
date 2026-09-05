@@ -4,5 +4,12 @@ import { showMenu } from "./menu.js";
 import { showAbout } from "./about.js";
 
 showHome();
-showMenu();
-showAbout();
+
+const homeBtn = document.querySelector(".home");
+homeBtn.addEventListener("click", () => showHome())
+
+const menuBtn = document.querySelector(".menu");
+menuBtn.addEventListener("click", () => showMenu())
+
+const aboutBtn = document.querySelector(".about");
+aboutBtn.addEventListener("click", () => showAbout())
