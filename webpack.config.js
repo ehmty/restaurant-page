@@ -12,7 +12,7 @@ export default {
   },
   devtool: "eval-source-map",
   devServer: {
-    watchFiles: [".src/template.html"],
+    watchFiles: ["./src/template.html"],
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -27,6 +27,10 @@ export default {
             },
             {
               test: /\.(woff|woff2)$/i,
+              type: "asset/resource",
+            },
+            {
+              test: /\.(png|svg|jpg|jpeg|gif)$/i,
               type: "asset/resource",
             },
         ],
