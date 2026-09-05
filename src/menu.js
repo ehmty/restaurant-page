@@ -3,7 +3,14 @@ export function showMenu() {
     content.textContent = "";
 
     const menuContainer = document.createElement("div");
+    menuContainer.classList.add("menu-container");
 
+    const coffeeSection = document.createElement("div");
+    coffeeSection.classList.add("menu-section");
+
+    const foodSection = document.createElement("div");
+    foodSection.classList.add("menu-section");
+    
     const menu = document.createElement("h1");
     const coffee = document.createElement("h2");
     const food = document.createElement("h2");
@@ -36,6 +43,8 @@ export function showMenu() {
     food2Text.textContent = "Soft dough, cinnamon and a light glaze.";
     food3Text.textContent = "Sourdough toast with avocado, herbs and a touch of lemon.";
 
-    menuContainer.append(menu, coffee, coffee1, coffee1Text, coffee2, coffee2Text, coffee3, coffee3Text, food, food1, food1Text, food2, food2Text, food3, food3Text);
+    coffeeSection.append(coffee, coffee1, coffee1Text, coffee2, coffee2Text, coffee3, coffee3Text);
+    foodSection.append(food, food1, food1Text, food2, food2Text, food3, food3Text);
+    menuContainer.append(menu, coffeeSection, foodSection);
     content.append(menuContainer);
 }
