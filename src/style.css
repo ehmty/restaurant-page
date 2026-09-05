@@ -1,7 +1,8 @@
 :root {
-    --creme: #F4EBDD;
-    --green: #24382F;
-    --brown: #A65A32;
+    --creme: rgb(232, 220, 202);
+    --green: rgb(36, 56, 47);
+    --brown: rgb(138, 75, 42);
+    --cards: rgb(244, 236, 224);
 }
 
 * {
